@@ -10,9 +10,9 @@ https://www.youtube.com/channel/UCOi-BDrmHPN_B1CWc7qBNOw
 
 Below is the complete list of React Native tutorials in telugu
 
-#1 Hello World - https://youtu.be/nYU0600sVRY
-#2 Basic Concepts - Class - https://youtu.be/HnZUJ499Jlg
-#3 Basic Concepts - Props & State - https://youtu.be/08hxNYdCU6A
+#1 Hello World - https://youtu.be/nYU0600sVRY \n
+#2 Basic Concepts - Class - https://youtu.be/HnZUJ499Jlg \n
+#3 Basic Concepts - Props & State - https://youtu.be/08hxNYdCU6A \n
 #4 Login Screen design  - https://youtu.be/fdECfwZhMcg
 #5 React native paper  - https://youtu.be/vmQvFAKK4cg
 #6 Login Screen Validation - https://youtu.be/FQTCFhAb6QY
