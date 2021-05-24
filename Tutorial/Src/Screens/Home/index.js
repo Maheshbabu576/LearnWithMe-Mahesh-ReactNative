@@ -21,7 +21,7 @@ export default class index extends Component {
 
     renderRowItem = (rowitem) => {
         return(
-            <Card style={{margin:'2%'}}>
+            <Card style={{margin:'2%'}} onPress={ () => this.GotoProfileDetails(rowitem.item.id)}>
                
                <View style={{alignItems:'center',margin:'2%'}}>
                    
@@ -49,11 +49,13 @@ export default class index extends Component {
         fetch(usersurl)
         .then((response) => response.json())
         .then((responseJson) => {
-            setTimeout(() => {   
-                this.setState({
+            // setTimeout(() => {   
+            //    }, 2000);
+
+               this.setState({
                 userList : this.state.userList.concat(responseJson.data),
                 isListRefreshing : false
-            }) }, 2000);
+            }) 
            
           })
         
@@ -70,6 +72,11 @@ export default class index extends Component {
         })
         this.GetUsersList()
 
+    }
+    GotoProfileDetails = (selectedUser) => {
+
+        console.log("selected user",selectedUser)
+        this.props.navigation.navigate('PersonDetails', selectedUser)
     }
     render() {
         return (
