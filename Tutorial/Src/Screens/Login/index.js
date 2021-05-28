@@ -3,9 +3,12 @@ import { SafeAreaView, Text, View,Image, TextInput , StyleSheet } from 'react-na
 import { TextInput as MaterialTextInput ,  Button , HelperText ,  TouchableOpacity} from 'react-native-paper';
 import {loginStyles} from './Styles'
 import { StyleConstats,FontConstats} from '../../Constants/StyleConstants'
+import {AuthContext} from '../../Helpers/Authentication/AuthContext'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default class index extends Component {
 
+    static contextType = AuthContext
 
     constructor(props){
         super(props)
@@ -38,6 +41,16 @@ export default class index extends Component {
             this.setState({
                 passwordError : false
             })
+        }
+
+        
+        if(this.state.emailValue != null &&  this.state.passwordValue != ''){
+
+        
+            AsyncStorage.setItem('userToken', "123456")
+            this.context.signIn("123456")
+
+
         }
             
     }
